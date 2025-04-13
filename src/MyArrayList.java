@@ -20,10 +20,6 @@ public class MyArrayList<T extends Comparable<T>> implements MyList<T> {
 
     @Override
     public void add(int index, T item) {
-        if (index < 0 || index > size) {
-            throw new IndexOutOfBoundsException("Given index is out of bounds." + " Index: " + index + ", Size: " + size);
-        }
-
         capacityRegulation();
 
         for(int i = size - 1; i >= index; i--) {
@@ -42,7 +38,7 @@ public class MyArrayList<T extends Comparable<T>> implements MyList<T> {
     public void addFirst(T item) {
         capacityRegulation();
 
-        for(int i = size - 1; i > 0; i--) {
+        for(int i = size - 1; i >= 0; i--) {
             array[i + 1] = array[i];
         }
         array[0] = item;
@@ -109,7 +105,7 @@ public class MyArrayList<T extends Comparable<T>> implements MyList<T> {
                 return i;
             }
         }
-        throw new IllegalArgumentException("Object not found");
+        return -1;
     }
 
 
@@ -120,18 +116,13 @@ public class MyArrayList<T extends Comparable<T>> implements MyList<T> {
                 return i;
             }
         }
-        throw new IllegalArgumentException("Object not found");
+        return -1;
     }
 
 
     @Override
     public boolean exists(Object object) {
-        for (int i = 0; i < size; i++) {
-            if (object == array[i]) {
-                return true;
-            }
-        }
-        return false;
+        return indexOf(object) != -1;
     }
 
 
