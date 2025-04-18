@@ -5,7 +5,7 @@ public class Main {
 
         System.out.println();
 
-
+/*
         MyList<Integer> myArrayList = new MyArrayList<>();
         myArrayList.add(5);
         myArrayList.add(23);
@@ -69,7 +69,40 @@ public class Main {
         }
         System.out.println();
         System.out.println(myLinkedList.size());
+*/
 
+
+        MyMinHeap<Integer> myMinHeap = new MyMinHeap<>();
+        myMinHeap.insert(15);
+        myMinHeap.insert(10);
+        myMinHeap.insert(20);
+        myMinHeap.insert(31);
+        myMinHeap.insert(4);
+        myMinHeap.insert(25);
+        myMinHeap.insert(6);
+
+
+        Object[] arr = myMinHeap.getArrOfHeap();
+        for (int i = 1; i < myMinHeap.size() + 1; i++) {
+            System.out.print(arr[i] + " ");
+        }
+        System.out.println();
+        System.out.println(myMinHeap.size());
+
+        myMinHeap.extractMin();
+
+        for (int i = 1; i < myMinHeap.size() + 1; i++) {
+            System.out.print(arr[i] + " ");
+        }
+        System.out.println();
+        System.out.println(myMinHeap.size());
+
+        myMinHeap.insert(1);
+        for (int i = 1; i < myMinHeap.size() + 1; i++) {
+            System.out.print(arr[i] + " ");
+        }
+        System.out.println();
+        System.out.println(myMinHeap.size());
 
     }
 }
