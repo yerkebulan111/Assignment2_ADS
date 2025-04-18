@@ -1,4 +1,3 @@
-import javax.swing.plaf.synth.SynthOptionPaneUI;
 import java.util.Iterator;
 
 public class MyLinkedList<T extends Comparable<T>> implements MyList<T> {
