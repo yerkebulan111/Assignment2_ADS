@@ -28,9 +28,9 @@ Public:
 7. getArrOfHeap()
 
 Private:
-8. heapify(int index)
-9. traverseUp(int index)
-10. int leftChildOf(int index)
-11. int rightChildOf(int index)
-12. int parentOf(int index)
-13. swap(int index1, int index2)
+1. heapify(int index)
+2. traverseUp(int index)
+3. int leftChildOf(int index)
+4. int rightChildOf(int index)
+5. int parentOf(int index)
+6. swap(int index1, int index2)
